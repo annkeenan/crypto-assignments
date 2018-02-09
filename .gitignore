@@ -1,0 +1,4 @@
+*.o
+*.DS_Store
+*.tar.gz
+pa01/main
