@@ -1,4 +1,4 @@
-# Programming Assignment 01 - RSA
+# Programming Assignment 02 - ElGamal
 
 ## Summary
 

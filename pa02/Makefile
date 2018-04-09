@@ -1,6 +1,6 @@
 CPP=g++
 CPPFLAGS=-Wall -std=c++11 -g
-INCLUDE=/usr/local/Cellar/gmp/6.1.2_1/include/gmp.h
+INCLUDE=/usr/local/Cellar/gmp/6.1.2_2/include/gmp.h
 LD=g++
 LDFLAGS=-lgmpxx -lgmp
 OBJECTS=main.o
