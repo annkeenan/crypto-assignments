@@ -1,4 +1,4 @@
-# Programming Assignment 03 - Paillier Cryptosyste
+# Programming Assignment 03 - Paillier Cryptosystem
 
 ## Summary
 
