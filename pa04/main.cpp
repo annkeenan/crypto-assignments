@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
   element_t g1;
   element_t public_key, secret_key;
   element_t sig2;
-  element_t m, m2, M, M2;
+  element_t M, M2;
   element_t h, h2;
 
   element_init_G1(g1, pairing);
@@ -63,8 +63,6 @@ int main(int argc, char *argv[]) {
 
   element_init_G1(sig2, pairing);
 
-  element_init_G1(m, pairing);
-  element_init_G1(m2, pairing);
   element_init_Zr(M, pairing);
   element_init_Zr(M2, pairing);
 
@@ -89,8 +87,6 @@ int main(int argc, char *argv[]) {
   char *buf1 = new char[tmp_vec[0].length() + 1];
   strcpy(buf1, tmp_vec[0].c_str());
   // printf("message = %s\n", buf1);
-  //element_from_hash(m, buf1, tmp_vec[0].length());
-  //element_printf("H(message) = %B\n", m);
   element_from_hash(M, buf1, tmp_vec[0].length());
   // element_printf("H(message) = %B\n", M);
   delete [] buf1;
@@ -104,8 +100,6 @@ int main(int argc, char *argv[]) {
 
   char *buf2 = new char[tmp_vec[0].length() + 1];
   strcpy(buf2, tmp_vec[0].c_str());
-  // printf("message' = %s\n", buf2);
-  // element_from_hash(m2, buf2, tmp_vec[0].length());
   // element_printf("H(message') = %B\n", m2);
   element_from_hash(M2, buf2, tmp_vec[0].length());
   // element_printf("H(message') = %B\n", M2);
@@ -153,8 +147,6 @@ int main(int argc, char *argv[]) {
   element_clear(h);
   element_clear(M2);
   element_clear(M);
-  element_clear(m2);
-  element_clear(m);
   element_clear(sig2);
   element_clear(secret_key);
   element_clear(public_key);
